@@ -1,7 +1,6 @@
 export async function getNews(contry) {
-  let url = 'https://newsapi.org/v2/top-headlines?' +
-    + 'country=' + contry + '&' +
-    'apiKey=52b388a921624383a19131605b5f1bfc';
+  let url = 'https://newsapi.org/v2/top-headlines?country='
+    + contry + '&' + 'apiKey=52b388a921624383a19131605b5f1bfc';
   let request = new Request(url);
   let response = await fetch(request);
   let news = await response.json();
