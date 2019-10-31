@@ -8,21 +8,6 @@
     "dev": "webpack-dev-server --open --config webpack.dev.conf.js",
     "build": "webpack --config webpack.build.conf.js"
   },
-  "bable": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "ie": 11
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-transform-modules-umd"
-    ]
-  },
   "browserslist": [
     "> 1%",
     "last 3 version"
@@ -33,8 +18,10 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
+    "@babel/runtime": "^7.6.3",
     "autoprefixer": "^9.7.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
@@ -42,6 +29,8 @@
     "cssnano": "^4.1.10",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "moment": "^2.24.0",
+    "moment-locales-webpack-plugin": "^1.1.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",

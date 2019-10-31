@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2231422e-b3f5-47c2-92ba-4b6bb9b9c40f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/js/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/getNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/getNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.base.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.base.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Front camp\HW1" />
       <recent name="D:\Front camp\HW1\src" />
     </key>
   </component>
@@ -64,7 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1572104284054</updated>
       <workItem from="1572104285332" duration="14637000" />
-      <workItem from="1572251468357" duration="15169000" />
+      <workItem from="1572251468357" duration="16210000" />
+      <workItem from="1572506058738" duration="7055000" />
     </task>
     <servers />
   </component>
@@ -76,7 +89,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

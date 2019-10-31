@@ -3,6 +3,10 @@
   justify-content: space-around;
   margin-right: 0;
   margin-left: 0;
+
+  .col-sm-5:nth-last-child(-n+2) {
+    margin: 0 0 150px 0;
+  }
 }
 
 .card {
@@ -15,9 +19,26 @@
 
 #navbarNavAltMarkup {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.navbar-nav > * {
-  margin: 0 10px !important;
+.btn-primary {
+  margin-right: 15px;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+
+  p {
+    margin:  8px 0 4px 0;
+  }
+  p:last-child {
+    margin: 4px 0 8px 0 ;
+  }
+}
+
