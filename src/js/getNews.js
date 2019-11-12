@@ -1,20 +1,39 @@
-export async function getNews(contry) {
-  let url = 'https://newsapi.org/v2/top-headlines?pageSize=10&country='
-    + contry + '&' + 'apiKey=52b388a921624383a19131605b5f1bfc';
+import * as module from './errorPopup';
+
+import { proxy } from "./factory";
+
+export async function getNews(country) {
+  const proxyFactory = proxy();
+  let url = proxyFactory.count10(country);
+  let response;
+  let news;
   let request = new Request(url);
-  let response = await fetch(request);
-  let news = await response.json();
+
+  try {
+    response = await fetch(request);
+  } finally {
+    if (response.status !== 200) {
+      module.default.errorPopup('error status: ' + response.status + ' ' + response.statusText);
+    }
+  }
+
+  try {
+    news = await response.json();
+  } catch (e) {
+    module.default.errorPopup("JSON Error");
+  }
+
   let articles = news.articles;
   let moment = require('moment');
-
-  articles.forEach((article) => {
-    let date = moment(article.publishedAt).format("YYYY-MM-DD, h:mm:ss a");
-    let author = article.author === null ? 'Unknown' : article.author;
-    let content = (article.content === null || article.content === '') ? 'Unknown' : article.content;
-    let description = article.description === null ? 'Unknown' : article.description;
-    let title = article.title === null ? 'Unknown' : article.title;
-    let sourceName = article.source.name === null ? 'Unknown' : article.source.name;
-    let articleCard = `<div class="col-sm-5">
+  if (response.status === 200) {
+    articles.forEach((article) => {
+      let date = moment(article.publishedAt).format("YYYY-MM-DD, h:mm:ss a");
+      let author = article.author === null ? 'Unknown' : article.author;
+      let content = (article.content === null || article.content === '') ? 'Unknown' : article.content;
+      let description = article.description === null ? 'Unknown' : article.description;
+      let title = article.title === null ? 'Unknown' : article.title;
+      let sourceName = article.source.name === null ? 'Unknown' : article.source.name;
+      let articleCard = `<div class="col-sm-5">
 
     <div class="card">
       <img class="card-img-top" src="${article.urlToImage}" alt="Card image cap">
@@ -34,7 +53,8 @@ export async function getNews(contry) {
       </div>
     </div>
     </div>`;
-    document.getElementById('news').insertAdjacentHTML('beforeend', articleCard);
-  })
+      document.getElementById('news').insertAdjacentHTML('beforeend', articleCard);
+    })
+  }
 }
 
