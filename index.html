@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>HW1</title>
-    <link rel="stylesheet" href="./dist/app.css">
+    <link rel="stylesheet" href="/dist/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/dist/app.css" rel="stylesheet"></head>
 <body>
 <nav class="navbar navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <button id="RU" type="button" class="btn btn-primary">RU<span class="sr-only">(current)</span></button>
-            <button id="US" type="button" class="btn btn-primary">US</button>
-            <button id="UA" type="button" class="btn btn-primary">UA</button>
+    <div class="select-country">
+        <label>Select a country: </label>
+        <select id="countries" name="countries">
+        </select>
     </div>
 </nav>
 <div id="news" class="row news">
@@ -21,5 +22,6 @@
     <p>For free non-commercial use of the API</p>
 </div>
 
-<script type="text/javascript" src="./dist/app.js"></script></body>
+<script src="./dist/app.js"></script>
+</body>
 </html>
