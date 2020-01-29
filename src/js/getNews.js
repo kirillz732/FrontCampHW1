@@ -1,4 +1,4 @@
-const module = await import('./errorPopup');
+import * as module from './errorPopup';
 
 import { proxy } from "./factory";
 

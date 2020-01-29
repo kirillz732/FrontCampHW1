@@ -5,7 +5,8 @@ const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: "./src/index.js"
+    app: "./src/index.js",
+    error: "./src/js/errorPopup.js"
   },
   output: {
     filename: "[name].js",
