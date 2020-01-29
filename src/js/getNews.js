@@ -1,8 +1,8 @@
-import * as module from './errorPopup';
 
 import { proxy } from "./factory";
 
 export async function getNews(country) {
+  const module = await import('./errorPopup');
   const proxyFactory = proxy();
   let url = proxyFactory.count10(country);
   let response;
