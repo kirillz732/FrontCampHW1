@@ -13,6 +13,7 @@ let apis = {
 
 export function proxy() {
   let p = new Proxy(apis, {});
+  console.log(apis);
   return p
 }
 
