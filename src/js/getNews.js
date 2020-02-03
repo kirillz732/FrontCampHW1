@@ -4,28 +4,26 @@ import { proxy } from "./factory";
 export async function getNews(country) {
   const module = await import('./errorPopup');
   const proxyFactory = proxy();
-  let url = proxyFactory.count10(country);
+  let responseJSON;
   let response;
-  let news;
-  let request = new Request(url);
 
   try {
-    response = await fetch(request);
+     responseJSON = await proxyFactory.count10(country);
   } finally {
-    if (response.status !== 200) {
-      module.default.errorPopup('error status: ' + response.status + ' ' + response.statusText);
+    if (responseJSON.status !== 200) {
+      module.default.errorPopup('error status: ' + responseJSON.status + ' ' + responseJSON.statusText);
     }
   }
 
   try {
-    news = await response.json();
+    response = await responseJSON.json();
   } catch (e) {
     module.default.errorPopup("JSON Error");
   }
 
-  let articles = news.articles;
+  let articles = response.articles;
   let moment = require('moment');
-  if (response.status === 200) {
+  if (responseJSON.status === 200) {
     articles.forEach((article) => {
       let date = moment(article.publishedAt).format("YYYY-MM-DD, h:mm:ss a");
       let author = article.author === null ? 'Unknown' : article.author;
